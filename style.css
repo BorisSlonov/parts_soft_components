@@ -708,6 +708,37 @@
     margin-top: 15px;
 }
 
+@media(max-width:767px) {
+    .lkCardLink {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--stroke, #EAEAEA);
+        border-radius: 0;
+        padding-right: 20px;
+    }
+
+    .lkCardLink::after {
+        content: '';
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 18px;
+        height: 12px;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none"><path d="M1 1L7 7L1 13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+    }
+
+    .lkCardLink__p {
+        display: none;
+    }
+}
+
 /* discountPopup */
 
 .discountPopup {
@@ -729,4 +760,76 @@
 .discountPopup__h3 {
     color: #fff;
     font-size: 18px;
+}
+
+/* pcQr */
+
+.pcQr {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pcQr__code {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    padding: 0 16px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.pcQr__span {
+    background: linear-gradient(90.49deg, #FBAF79 0.42%, #FF8B15 100.98%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mobQr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: var(--new-collors-primary-dark, #3A3A3A);
+    box-shadow: 0px 0px 10px 0px rgba(27, 29, 53, 0.12);
+    max-width: 425px;
+    color: #D1D1D1;
+    font-size: 13px;
+}
+
+.mobQr__item:last-child {
+    max-width: 200px;
+}
+
+.mobQr__code {
+    font-weight: 500;
+    color: #fff;
+}
+
+/* qrPopup */
+
+.qrPopup {
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 32px 24px;
+    border-radius: 8px;
+    background: var(--new-collors-secondary, #414141);
+    color: #fff;
+}
+
+.qrPopup__p {
+    margin: 0;
+    font-size: 14px;
 }
